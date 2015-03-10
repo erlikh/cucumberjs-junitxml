@@ -62,7 +62,7 @@ var reporterHooks = function() {
 
         if (stepResult.isSuccessful()) {
             resultStatus = 'passed';
-            if (stepResult.hasAttachments()) {
+            if (stepResult.hasAttachments && stepResult.hasAttachments()) {
                 attachments = stepResult.getAttachments();
             }
             stepOutput.result.duration = stepResult.getDuration();
