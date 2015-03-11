@@ -79,7 +79,7 @@ var reporterHooks = function() {
             if (failureMessage) {
                 stepOutput.result.error_message = (failureMessage.stack || failureMessage);
             }
-            if (stepResult.hasAttachments()) {
+            if (stepResult.hasAttachments && stepResult.hasAttachments()) {
                 attachments = stepResult.getAttachments();
             }
             stepOutput.result.duration = stepResult.getDuration();
